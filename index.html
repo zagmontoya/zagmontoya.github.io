@@ -6,11 +6,15 @@
     <title>Beyza</title>
     <style>
         /* Ensure HTML and Body take full height */
-        html, body {
+        html {
             height: 100%; /* Makes sure both html and body occupy 100% of the viewport height */
             margin: 0;
             padding: 0;
-            overflow: hidden; /* Prevent scrolling if content slightly overflows */
+            /* Apply gradient to html and make it fixed to cover viewport */
+            /* Adjusted the brown color to be more distinct */
+            background: linear-gradient(to bottom right, #4682B4, #8B4513, #3CB371); /* Steel Blue, Saddle Brown (darker coffee), Medium Sea Green */
+            background-size: cover; /* Ensures the background covers the entire element */
+            background-attachment: fixed; /* Fixes background to the viewport */
         }
 
         body {
@@ -18,11 +22,15 @@
             flex-direction: column;
             justify-content: center; /* Centers content vertically */
             align-items: center; /* Centers content horizontally */
-            /* Gradient Background: Blue -> Brown -> Green */
-            background: linear-gradient(to bottom right, #6495ED, #A0522D, #3CB371);
+            min-height: 100vh; /* Body itself should still try to take full viewport height */
+            width: 100%; /* Ensure body takes full width */
+            margin: 0;
+            padding: 0;
             font-family: sans-serif;
             text-align: center;
-            box-sizing: border-box; /* Include padding in element's total width */
+            overflow: hidden; /* Keep if you're sure content won't need to scroll */
+            box-sizing: border-box;
+            background: transparent; /* No background on body, as it's now on html */
         }
 
         .main-text-container {
