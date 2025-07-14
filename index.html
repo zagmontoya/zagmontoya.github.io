@@ -5,61 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beyza</title>
     <style>
+        /* Ensure HTML and Body take full height */
+        html, body {
+            height: 100%; /* Makes sure both html and body occupy 100% of the viewport height */
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Prevent scrolling if content slightly overflows */
+        }
+
         body {
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
+            justify-content: center; /* Centers content vertically */
+            align-items: center; /* Centers content horizontally */
+            /* Gradient Background: Blue -> Brown -> Green */
             background: linear-gradient(to bottom right, #6495ED, #A0522D, #3CB371);
             font-family: sans-serif;
             text-align: center;
-            overflow: hidden;
-            box-sizing: border-box;
+            box-sizing: border-box; /* Include padding in element's total width */
         }
 
         .main-text-container {
             display: flex;
-            flex-direction: column;
+            flex-direction: column; /* Stack items vertically */
             justify-content: center;
             align-items: center;
             color: #fff;
-            line-height: 1.1;
-            padding: 0 10px;
+            line-height: 1.0; /* Keep tight, use margin for separation */
+            padding: 0 10px; /* Add some horizontal padding */
             box-sizing: border-box;
-            max-width: 95%;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            max-width: 95%; /* Limit width to prevent overflow on very narrow screens */
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Subtle shadow for readability */
         }
 
         .main-text-top {
-            font-size: 10vw;
+            font-size: 20vw; /* Significantly bigger size for "37..." */
             font-weight: bold;
-            white-space: nowrap;
+            white-space: nowrap; /* Keep on one line */
+            margin-bottom: 3vh; /* Increased gap from the text below */
         }
 
         .main-text-bottom {
-            font-size: 5vw;
+            font-size: 6vw; /* Retained original size for "Tanıdık geldi mi?" */
             font-weight: normal;
-            white-space: nowrap;
+            white-space: nowrap; /* Keep on one line */
         }
 
         /* Media queries for responsiveness */
         @media (max-width: 768px) {
             .main-text-top {
-                font-size: 15vw;
+                font-size: 25vw; /* Even bigger on smaller screens */
+                margin-bottom: 4vh; /* Increased gap on smaller screens */
             }
             .main-text-bottom {
-                font-size: 8vw;
+                font-size: 10vw; /* Retained original size for smaller screens */
             }
         }
 
         @media (max-width: 480px) {
             .main-text-top {
-                font-size: 18vw;
+                font-size: 30vw; /* Maximize size on small phones */
+                margin-bottom: 5vh; /* Increased gap on tiny screens */
             }
             .main-text-bottom {
-                font-size: 9vw;
+                font-size: 12vw; /* Retained original size for tiny screens */
             }
         }
     </style>
