@@ -7,31 +7,44 @@
     <style>
         body {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             margin: 0;
             background-color: #f0f0f0;
             font-family: sans-serif;
+            text-align: center;
         }
 
-        .number-container {
+        .subtitle {
+            font-size: 4vw;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .main-text-container {
             font-size: 15vw;
             font-weight: bold;
             color: #333;
         }
 
-        /* Media query for smaller screens (e.g., iPhones) */
         @media (max-width: 768px) {
-            .number-container {
+            .subtitle {
+                font-size: 6vw;
+            }
+            .main-text-container {
                 font-size: 25vw;
             }
         }
     </style>
 </head>
 <body>
-    <div class="number-container">
-        37
+    <div class="subtitle">
+        devam eden çalışma
+    </div>
+    <div class="main-text-container">
+        37... Tanıdık geldi mi?
     </div>
 </body>
 </html>
